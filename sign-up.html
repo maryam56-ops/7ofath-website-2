@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدورات</title>
+    <link rel="icon" href="صور/حفاظ البيان خلفيه ابيض.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="maktaba.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    />
+    <script>
+      function validateForm(event) {
+        const firstName = document.getElementsByName("FirstName")[0].value;
+        const lastName = document.getElementsByName("LastName")[0].value;
+        const email = document.getElementsByName("Email")[0].value;
+        const password = document.getElementsByName("Password")[0].value;
+
+        if (!firstName || !lastName || !email || !password) {
+          alert("يجب تعبئة جميع الحقول");
+          event.preventDefault(); // Prevent form submission
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <section class="header_bages">
+      <nav>
+        <a href="index.html"
+          ><img src="/صور/حفاظ البيان خلفيه ابيض.png" alt="لوجو حفاظ "
+        /></a>
+        <div class="nav-links_bages" id="navLinks">
+          <i class="fa fa-window-close" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="">تواصل معنا</a></li>
+            <li><a href="دورات.html">الدورات</a></li>
+            <li><a href="#tasgeel">التسجيل</a></li>
+            <li><a href="index.html">الرئيسية</a></li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <a href="login.html"
+            ><button class="btn" id="loginBtn">تسجيل الدخول</button></a
+          >
+        </div>
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu"></i>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="login">
+        <div class="top">
+          <span
+            >هل تمتلك حساب بالفعل؟
+            <a href="login.html" onclick="login()">login</a></span
+          >
+        </div>
+        <h1><label for="User Name"> أنشئ حسابك </label><br /></h1>
+        <input
+          type="text"
+          name="FirstName"
+          id="User Name"
+          placeholder="الإسم الأول"
+        /><br />
+        <input
+          type="text"
+          name="LastName"
+          id="User Name"
+          placeholder=" الإسم الأخير"
+          autocomplete="off"
+        /><br />
+        <input
+          type="text"
+          name="Email"
+          id="User Name"
+          placeholder="الإيميل"
+          autocomplete="off"
+        /><br />
+        <input
+          type="password"
+          name="Password"
+          id="Enter Password"
+          placeholder="كلمة السر"
+          autocomplete="off"
+        /><br />
+        <div class="one">
+          <input type="checkbox" id="register-check" />
+          <label for="register-check">تذكرني</label>
+        </div>
+        <!-- Change <a> to <button> and add onClick event to validate form -->
+        <button
+          type="button"
+          name="submit"
+          id="logiiinbtn"
+          onclick="validateForm(event)"
+        >
+          أنشئ الحساب
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

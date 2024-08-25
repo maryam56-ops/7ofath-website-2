@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدورات</title>
+    <link rel="icon" href="صور/حفاظ البيان خلفيه ابيض.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="maktaba.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    />
+    <script>
+      function validateLoginForm(event) {
+        const firstName = document.getElementsByName("FirstName")[0].value;
+        const serialNumber =
+          document.getElementsByName("SerialNumber")[0].value;
+        const password = document.getElementsByName("Enter Password")[0].value;
+
+        if (!firstName || !serialNumber || !password) {
+          alert("يجب تعبئة جميع الحقول");
+          event.preventDefault(); // Prevent form submission
+        } else {
+          // You can add logic here to validate credentials or perform further actions
+          window.location.href = "/index.html"; // Redirect to home page
+        }
+      }
+
+      function redirectToSignUp() {
+        window.location.href = "sign-up.html";
+      }
+    </script>
+  </head>
+  <body>
+    <section class="header_bages">
+      <nav>
+        <a href="index.html"
+          ><img src="/صور/حفاظ البيان خلفيه ابيض.png" alt="لوجو حفاظ "
+        /></a>
+        <div class="nav-links_bages" id="navLinks">
+          <i class="fa fa-window-close" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="">تواصل معنا</a></li>
+            <li><a href="دورات.html">الدورات</a></li>
+            <li><a href="index.html">الرئيسية</a></li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <a href="login.html"
+            ><button class="btn" id="loginBtn">تسجيل الدخول</button></a
+          >
+        </div>
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu"></i>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="login">
+        <h1><label for="User Name">سجل دخولك</label><br /></h1>
+
+        <input
+          type="text"
+          name="FirstName"
+          id="FirstName"
+          placeholder="الأسم"
+          autocomplete="off"
+        /><br />
+        <input
+          type="text"
+          name="SerialNumber"
+          id="SerialNumber"
+          placeholder="الهاتف"
+          autocomplete="off"
+        /><br />
+        <input
+          type="password"
+          name="Enter Password"
+          id="EnterPassword"
+          placeholder="الرقم السري"
+          autocomplete="off"
+        /><br />
+        <button
+          type="button"
+          name="submit"
+          id="logiiinbtn"
+          onclick="validateLoginForm(event)"
+        >
+          سجل دخولك</button
+        ><br /><br />
+        <span class="question">
+          ليس لدي حساب
+          <a href="sign-up.html" onclick="redirectToSignUp()">أنشئ حساب</a>
+        </span>
+      </div>
+    </section>
+  </body>
+</html>
